@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_bg"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/app_logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/white_bg_frame"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_logo" />
+
+    <!--Airtime & Data-->
+    <androidx.cardview.widget.CardView
+        android:id="@id/airtime_data"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="@color/airtime_blue"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="true"
+        app:layout_constraintBottom_toTopOf="@id/pay_bills"
+        app:layout_constraintLeft_toLeftOf="@id/white_bg_frame"
+        app:layout_constraintRight_toLeftOf="@+id/transfer"
+        app:layout_constraintTop_toTopOf="@id/white_bg_frame">
+
+        <ImageButton
+            android:id="@+id/airtime_data"
+            style="@style/ImageButtonHomePage"
+            android:contentDescription="@string/airtime_data"
+            
+            android:src="@drawable/airtime_data" />
+
+        <TextView
+            style="@style/HomePageText"
+            android:text="@string/airtime_data" />
+    </androidx.cardview.widget.CardView>
+
+    <!--Transfer-->
+    <androidx.cardview.widget.CardView
+        android:id="@id/transfer"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_margin="8dp"
+        
+        app:cardBackgroundColor="@color/transfer_orange"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="true"
+        app:layout_constraintBottom_toTopOf="@id/pay_bills"
+        app:layout_constraintLeft_toRightOf="@id/airtime_data"
+        app:layout_constraintRight_toLeftOf="@+id/cardless_withdrawal"
+        app:layout_constraintTop_toTopOf="@id/white_bg_frame">
+
+        <ImageButton
+            android:id="@+id/transfer"
+            style="@style/ImageButtonHomePage"
+            android:contentDescription="@string/transfer"
+            
+            android:src="@drawable/transfer" />
+
+        <TextView
+            style="@style/HomePageText"
+            android:text="@string/transfer" />
+    </androidx.cardview.widget.CardView>
+
+    <!--Cardless Withdrawal-->
+    <androidx.cardview.widget.CardView
+        android:id="@id/cardless_withdrawal"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_margin="8dp"
+        
+        app:cardBackgroundColor="@color/cashout_green"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="true"
+        app:layout_constraintBottom_toTopOf="@id/pay_bills"
+        app:layout_constraintLeft_toRightOf="@id/transfer"
+        app:layout_constraintRight_toRightOf="@+id/white_bg_frame"
+        app:layout_constraintTop_toTopOf="@id/white_bg_frame">
+
+        <ImageButton
+            android:id="@+id/cardless_withdrawal"
+            style="@style/ImageButtonHomePage"
+            android:contentDescription="@string/cardless_withdrawal"
+            
+            android:src="@drawable/cardless_withdrawal" />
+
+        <TextView
+            style="@style/HomePageText"
+            android:text="@string/cardless_withdrawal" />
+    </androidx.cardview.widget.CardView>
+
+    <!--Pay Bills-->
+    <androidx.cardview.widget.CardView
+        android:id="@id/pay_bills"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_margin="8dp"
+        
+        app:cardBackgroundColor="@color/bills_purple"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="true"
+        app:layout_constraintBottom_toTopOf="@id/reprint"
+        app:layout_constraintLeft_toLeftOf="@id/white_bg_frame"
+        app:layout_constraintRight_toLeftOf="@+id/card_withdrawal"
+        app:layout_constraintTop_toBottomOf="@id/airtime_data">
+
+        <ImageButton
+            android:id="@+id/pay_bills"
+            style="@style/ImageButtonHomePage"
+            android:contentDescription="@string/pay_bills"
+            
+            android:src="@drawable/pay_bills" />
+
+        <TextView
+            style="@style/HomePageText"
+            android:text="@string/pay_bills" />
+    </androidx.cardview.widget.CardView>
+
+    <!--Card Withdrawal-->
+    <androidx.cardview.widget.CardView
+        android:id="@id/card_withdrawal"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        
+        app:cardBackgroundColor="@color/card_withdrawal_green"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="true"
+        app:layout_constraintBottom_toTopOf="@id/reprint"
+        app:layout_constraintLeft_toRightOf="@id/pay_bills"
+        app:layout_constraintRight_toLeftOf="@id/betting_gaming"
+        app:layout_constraintTop_toBottomOf="@id/airtime_data">
+
+        <ImageButton
+            android:id="@+id/card_withdrawal"
+            style="@style/ImageButtonHomePage"
+            android:contentDescription="@string/card_withdrawal"
+            
+            android:src="@drawable/card_withdrawal" />
+
+        <TextView
+            style="@style/HomePageText"
+            android:text="@string/card_withdrawal" />
+    </androidx.cardview.widget.CardView>
+
+    <!--Betting & Gaming-->
+    <androidx.cardview.widget.CardView
+        android:id="@id/betting_gaming"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        
+        app:cardBackgroundColor="@color/betting_gaming_blue"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="true"
+        app:layout_constraintBottom_toTopOf="@id/reprint"
+        app:layout_constraintLeft_toRightOf="@id/card_withdrawal"
+        app:layout_constraintRight_toRightOf="@id/white_bg_frame"
+        app:layout_constraintTop_toBottomOf="@id/airtime_data">
+
+        <ImageButton
+            android:id="@+id/betting_gaming"
+            style="@style/ImageButtonHomePage"
+            android:contentDescription="@string/betting_gaming"
+            
+            android:src="@drawable/betting_gaming" />
+
+        <TextView
+            style="@style/HomePageText"
+            android:text="@string/betting_gaming" />
+    </androidx.cardview.widget.CardView>
+
+    <!--Reprint-->
+    <androidx.cardview.widget.CardView
+        android:id="@id/reprint"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_margin="8dp"
+        
+        app:cardBackgroundColor="@color/reprint_blue"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="true"
+        app:layout_constraintBottom_toBottomOf="@id/white_bg_frame"
+        app:layout_constraintLeft_toLeftOf="@id/white_bg_frame"
+        app:layout_constraintRight_toLeftOf="@id/settings"
+        app:layout_constraintTop_toBottomOf="@id/pay_bills">
+
+        <ImageButton
+            android:id="@+id/reprint"
+            style="@style/ImageButtonHomePage"
+            android:contentDescription="@string/reprint"
+            
+            android:src="@drawable/reprint" />
+
+        <TextView
+            style="@style/HomePageText"
+            android:text="@string/reprint" />
+    </androidx.cardview.widget.CardView>
+
+    <!--Settings-->
+    <androidx.cardview.widget.CardView
+        android:id="@id/settings"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_margin="8dp"
+        android:elevation="4dp"
+        
+        app:cardBackgroundColor="@color/settings_red"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="true"
+        app:layout_constraintBottom_toBottomOf="@id/white_bg_frame"
+        app:layout_constraintLeft_toRightOf="@id/reprint"
+        app:layout_constraintRight_toRightOf="@id/white_bg_frame"
+        app:layout_constraintTop_toBottomOf="@id/pay_bills">
+
+        <ImageButton
+            android:id="@+id/settings"
+            style="@style/ImageButtonHomePage"
+            android:contentDescription="@string/settings"
+            
+            android:src="@drawable/settings" />
+
+        <TextView
+            style="@style/HomePageText"
+            android:text="@string/settings" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.ConstraintLayout>

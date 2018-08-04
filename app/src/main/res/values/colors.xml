@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#9f2f05</color>
+    <color name="colorPrimaryDark">#531700</color>
+    <color name="colorAccent">#e24407</color>
+    <color name="black_73_percent">#b9000000</color>
+    <color name="white_30_percent">#60ffffff</color>
+    <color name="white_54_percent">#89ffffff</color>
+    <color name="blue">#19769f</color>
+    <color name="red">#e53935</color>
+
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="grey_dim">#696969</color>
+    <color name="grey">#808080</color>
+    <color name="ash">#564c4d</color>
+    <color name="indigo">#4b0082</color>
+    <color name="grey_disabled">#a7a7a7</color>
+
+    <color name="cancel_red">#d60000</color>
+    <color name="clear_yellow">#ce9804</color>
+    <color name="ok_green">#199F53</color>
+    <color name="bad_red">#FF5E5E</color>
+    <color name="card_withdrawal_green">#637700</color>
+    <color name="bills_purple">#A20097</color>
+    <color name="transfer_orange">#C13C00</color>
+    <color name="cashout_green">#0C7500</color>
+    <color name="settings_red">#A20000</color>
+    <color name="grey_bg">#EBEBEB</color>
+    <color name="white_60_percent">#90ffffff</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="textDark">#7e7e7e</color>
+    <color name="airtime_blue">#0012BC</color>
+    <color name="betting_gaming_blue">#2B0154</color>
+    <color name="reprint_blue">#007885</color>
+
+</resources>
